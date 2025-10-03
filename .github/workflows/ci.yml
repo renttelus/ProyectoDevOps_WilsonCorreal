@@ -25,4 +25,4 @@ jobs:
       run: dotnet build ProyectoDevOps_WilsonCorreal.sln --configuration Release --no-restore
 
     - name: Test
-      run: dotnet test ProyectoDevOps_WilsonCorreal.sln --no-build --verbosity normal
+      run: dotnet test ProyectoDevOps_WilsonCorreal.Tests/ProyectoDevOps_WilsonCorreal.Tests.csproj --no-build --verbosity normal
