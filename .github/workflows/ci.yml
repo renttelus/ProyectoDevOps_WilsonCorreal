@@ -7,16 +7,16 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build-and-test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
 
     - name: Setup .NET
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '8.0.x'
+        dotnet-version: 8.0.x
 
     - name: Restore dependencies
       run: dotnet restore ProyectoDevOps_WilsonCorreal.sln
@@ -24,8 +24,5 @@ jobs:
     - name: Build
       run: dotnet build ProyectoDevOps_WilsonCorreal.sln --configuration Release --no-restore
 
-    - name: Restore test dependencies
-      run: dotnet restore ProyectoDevOps_WilsonCorreal.Tests/ProyectoDevOps_WilsonCorreal.Tests.csproj
-
     - name: Test
-      run: dotnet test ProyectoDevOps_WilsonCorreal.Tests/ProyectoDevOps_WilsonCorreal.Tests.csproj --no-build --verbosity normal
+      run: dotnet test ProyectoDevOps_WilsonCorreal.sln --configuration Release --verbosity normal
