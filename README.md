@@ -1,2 +1,6 @@
 # ProyectoDevOps_WilsonCorreal
-Tarea 03: Creación de un proyecto, la gestión de tareas y la implementación de una canalización de integración continua (CI).
+Este proyecto fue creado como parte de un trabajo universitario.  
+El objetivo es aprender a gestionar repositorios, tareas y pipelines.  
+Se utiliza GitHub como herramienta alternativa para Azure DevOps.  
+El pipeline de integración continua se configuró con GitHub Actions.  
+Este proyecto no busca ser avanzado, solo demostrar el uso de las herramientas.
